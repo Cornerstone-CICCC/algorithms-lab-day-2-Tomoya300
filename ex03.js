@@ -3,15 +3,13 @@
 // Example: findMissingNumber([1, 2, 4, 5]) should return 3.
 
 function findMissingNumber(array) {
-    let missing = 0
-    for (i = 0; i < array.length - 1; i++) {
-        if (array[i] + 1 === array[i + 1]) {
-            missing += 0
-        } else {
-            missing += array[i] + 1
-        }
+    let missing = []
+    for (i = array[0]; i <= array[array.length-1]; i++) {
+        if (!array.includes(i)) {
+            missing.push(i)
+        } 
     }
     return missing
 }
 
-console.log(findMissingNumber([1, 2, 4, 5])); // Expected output: 3
+console.log(findMissingNumber([1, 2, 4, 5, 6, 7, 10])); // Expected output: 3, 8, 9

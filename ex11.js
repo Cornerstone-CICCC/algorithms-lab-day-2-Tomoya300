@@ -2,4 +2,15 @@
 // and returns the number of times the word appears in the string.
 // Example: countWordOccurrences("hello world hello", "hello") should return 2.
 
+function countWordOccurrences(string, word) {
+    let arr1 = string.split(" ")
+    let result = 0
+    arr1.forEach((item) => {
+        if (item === word) {
+            result += 1
+        }
+    })
+    return result
+}
+
 console.log(countWordOccurrences("hello world hello", "hello")); // Expected output: 2

@@ -2,6 +2,19 @@
 // `addItem(item)` to add an item to the cart, and `getItems()` to retrieve the list of added items.
 // Example: const cart = createCart(); cart.addItem("apple"); cart.getItems(); // ["apple"]
 
+function createCart() {
+    let obj = {
+        bag: [], 
+        addItem: function(item) {
+            this.bag.push(item)
+        }, 
+        getItems: function() {
+            return this.bag
+        }
+    }
+    return obj
+}
+
 const cart = createCart();
 cart.addItem("apple");
 cart.addItem("banana");
